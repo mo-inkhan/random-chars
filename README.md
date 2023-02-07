@@ -12,7 +12,8 @@ npm i @mo.inkhan/random-chars
 ```ts
 const randomChars = require('@mo.inkhan/random-chars')
 
-randomChars({length: 12,prefix: 'id_',charset: '1234567890'})
+randomChars()
+randomChars('id_', 12, '1234567890')
 ```
 
 ## License
