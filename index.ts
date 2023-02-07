@@ -8,18 +8,18 @@
  *
  */
 
-import { TRandomString } from "./index.d";
+import { TRandomChars, Charset } from "./index.d";
 
 /**
- * Random String.
+ * Random Chars.
  *
  * @param {string} prefix Prefix to be used
  * @param {number} length Length of random string
- * @param {string} charset Character set to be used
+ * @param {Charset} charset Character set to be used
  *
- * @return {string} Random string
+ * @return {string} Random chars
  */
-const radomString: TRandomString = (prefix = "", length = 12, charset = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789") => {
+const radomChars: TRandomChars = (prefix = "", length = 12, charset = Charset) => {
     let str = "";
     for (let i = 0; i < length; i++) {
         str += charset.charAt(Math.floor(Math.random() * charset.length));
@@ -28,4 +28,4 @@ const radomString: TRandomString = (prefix = "", length = 12, charset = "ABCDEFG
     return prefix + str;
 };
 
-export default radomString;
+export default radomChars;
