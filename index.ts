@@ -19,7 +19,7 @@ import { TRandomChars, Charset } from "./index.d";
  *
  * @return {string} Random chars
  */
-const radomChars: TRandomChars = (prefix = "", length = 12, charset = Charset) => {
+const randomChars: TRandomChars = (prefix = "", length = 12, charset = Charset) => {
     let str = "";
     for (let i = 0; i < length; i++) {
         str += charset.charAt(Math.floor(Math.random() * charset.length));
@@ -28,4 +28,4 @@ const radomChars: TRandomChars = (prefix = "", length = 12, charset = Charset) =
     return prefix + str;
 };
 
-export default radomChars;
+export default randomChars;
